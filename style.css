@@ -1,0 +1,168 @@
+:root {
+    --ball: #6f732f;
+    --word-highlighted: #6f732f;
+    --word: rgba(60, 82, 51, 0.37);
+}
+
+body{
+    background-color: #0d1f22;
+    margin: 0;
+}
+
+#bs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#bs-border{
+    width: 35%;
+    height: 0;
+    padding-bottom: 35%;
+}
+
+#bs-square{
+    width: 72%;
+    padding-bottom: 72%;
+    margin: 14%;
+    background-color: #b38a58;
+}
+
+#ball{
+    width: 3%;
+    padding-bottom: 3%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--ball);
+    animation: 16s infinite linear ball-move;
+}
+
+.word {
+    font-size: 40px;
+    font-family: "Times New Roman";
+    padding: 30px;
+}
+
+.top {
+    animation: 16s infinite word-top;
+}
+
+.left {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    position: absolute;
+    margin-left: -50%;
+    animation: 16s infinite word-left;
+}
+
+.right {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    position: absolute;
+    margin-right: -50%;
+    animation: 16s infinite word-right;
+}
+
+.bottom {
+    animation: 16s infinite word-bottom;
+}
+
+@keyframes ball-move {
+    0% {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    25% {
+        margin-top: 0;
+        margin-left: 32%;
+    }
+    50% {
+        margin-left: 32%;
+        margin-top: 32%;
+    }
+    75%{
+        margin-top: 32%;
+        margin-left: 0;
+    }
+}
+
+@keyframes word-top {
+    0% {
+        color: var(--word);
+    }
+    5%{
+        color: var(--word-highlighted);
+    }
+    20%{
+        color: var(--word-highlighted);
+    }
+    25% {
+        color: var(--word);
+    }
+    100% {
+        color: var(--word);
+    }
+}
+
+@keyframes word-right {
+    0% {
+        color: var(--word);
+    }
+    25% {
+        color: var(--word);
+    }
+    30% {
+        color: var(--word-highlighted);
+    }
+    45% {
+        color: var(--word-highlighted);
+    }
+    50%{
+        color: var(--word);
+    }
+    100% {
+        color: var(--word);
+    }
+}
+
+@keyframes word-bottom {
+    0% {
+        color: var(--word);
+    }
+    50% {
+        color: var(--word);
+    }
+    55% {
+        color: var(--word-highlighted);
+    }
+    70% {
+        color: var(--word-highlighted);
+    }
+    75%{
+        color: var(--word);
+    }
+    100% {
+        color: var(--word);
+    }
+}
+
+@keyframes word-left {
+    0% {
+        color: var(--word);
+    }
+    75% {
+        color: var(--word);
+    }
+    80% {
+        color: var(--word-highlighted);
+    }
+    95% {
+        color: var(--word-highlighted);
+    }
+    100%{
+        color: var(--word);
+    }
+}

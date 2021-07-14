@@ -1,0 +1,23 @@
+{
+  "name": "breathing-square",
+  "version": "1.0.0",
+  "description": "simple visual breathing aid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isabelringing1/breathing-square.git"
+  },
+  "author": "Isabel Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isabelringing1/breathing-square/issues"
+  },
+  "homepage": "https://github.com/isabelringing1/breathing-square#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
